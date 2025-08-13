@@ -1,4 +1,4 @@
-import hotGif from '../assets/hot.gif';
+import hotGif from '../../assets/hot.gif';
 
 
 interface PackageCardProps {

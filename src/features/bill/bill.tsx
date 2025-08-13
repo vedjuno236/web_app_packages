@@ -1,9 +1,9 @@
 import React from 'react';
 import { Check } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/naga_logo.png';
+import logo from '../../assets/naga_logo.png';
 import { Watermark } from 'antd';
-import '../css/buill.css'
+import '../../components/css/buill.css'
 
 const mockData = {
     fields: [

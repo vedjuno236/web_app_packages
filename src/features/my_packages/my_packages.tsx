@@ -1,3 +1,4 @@
+import { ShimmerMyPackages } from "../../components/animation/shimmer/shimmer";
 
 const tasks = [
   { id: '082', completed: true },
@@ -13,6 +14,9 @@ const MyPackages = () => {
   const completedCount = tasks.filter(task => task.completed).length;
   const totalTasks = tasks.length;
   const progress = (completedCount / totalTasks) * 100;
+  if (!tasks || tasks.length === 0) {
+    return <ShimmerMyPackages />;
+  }
   return (
     <div className="w-full">
       <div className="bg-[#D4EDDA] rounded-sm  p-2 border border-[#D4EDDA] translate-y-2 w-full">
@@ -48,7 +52,7 @@ const MyPackages = () => {
           <div className="flex items-center gap-9 w-full justify">
             <div className="flex flex-col ">
               {tasks.map((task) => (
-                <div key={task.id} className="flex items-center space-x-2 mb-1">
+                <div key={task.id} className="flex items-center space-x-3 mb-2">
                   <span
                     className={`w-5 h-5 border rounded-full flex items-center justify-center ${task.completed ? 'bg-yellow-400 border-yellow-400' : 'border-gray-300'
                       }`}

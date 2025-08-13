@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Packages from './features/packages/packages';
+import Bill from './features/bill/bill';
 import './App.css';
-import Packages from './view/packages';
-import Bill from './bill/bill';
+
 
 const App: React.FC = () => {
   return (
