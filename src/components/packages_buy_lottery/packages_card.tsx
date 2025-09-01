@@ -67,66 +67,67 @@ const PackagesCard = ({
   const buttonClass = getButtonClass(status);
 
   return (
-    <div className="relative w-full ">
-      {status === "Diamond" && position && (
-        <div className="absolute -top-3 -left-3 z-10">
-          <div className="w-8 h-8 bg-[#F15C5C] text-white text-[10px] font-semibold flex items-center justify-center rounded-full shadow-md">
-            {position}
+ 
+      <div className="relative w-full ">
+        {status === "Diamond" && position && (
+          <div className="absolute -top-3 -left-3 z-10">
+            <div className="w-8 h-8 bg-[#F15C5C] text-white text-[10px] font-semibold flex items-center justify-center rounded-full shadow-md">
+              {position}
+            </div>
+
           </div>
 
-        </div>
-
-      )}
-      {status === "Silver" && (
-        <div className="absolute -top-2 right-3 z-20">
-          <div className="w-10 h-5 bg-[#F15C5C] text-white text-[10px] font-semibold flex items-center justify-center rounded-full shadow-md">
-            Hot
+        )}
+        {status === "Silver" && (
+          <div className="absolute -top-2 right-3 z-20">
+            <div className="w-10 h-5 bg-[#F15C5C] text-white text-[10px] font-semibold flex items-center justify-center rounded-full shadow-md">
+              Hot
+            </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {status === "Silver" && (
-        <div className="absolute -top-4 right-3 z-20">
-          <img src={crown} alt="Hot Icon" className="w-4 h-4" />
-        </div>
-      )}
-
-
-
-      <div
-        onClick={onClick}
-        className={`relative bg-gradient-to-b ${gradientClass} rounded-2xl p-5 border ${borderClass} overflow-hidden`}
-      >
-        {status === 'Gold' && (
-          <div className="absolute top-4 right-4 text-xl">
-            <img src={loadingGif} alt="Loading" className="w-10 h-10 animate-spin" />
+        {status === "Silver" && (
+          <div className="absolute -top-4 right-3 z-20">
+            <img src={crown} alt="Hot Icon" className="w-4 h-4" />
           </div>
         )}
 
 
-        <div className="mb-10 ml-5">
-          <h3 className="text-gray-800 font-medium mb-1 text-lg">ແພັກແກັດ {title}</h3>
 
-          {originalPrice && (
-            <div className="text-sm text-red-400 line-through mb-1">{originalPrice}</div>
+        <div
+          onClick={onClick}
+          className={`relative bg-gradient-to-b ${gradientClass} rounded-2xl p-5 border ${borderClass} overflow-hidden`}
+        >
+          {status === 'Gold' && (
+            <div className="absolute top-4 right-4 text-xl">
+              <img src={loadingGif} alt="Loading" className="w-10 h-10 animate-spin" />
+            </div>
           )}
 
-          <div className="flex items-baseline gap-1">
-            <span className="text-2xl font-bold text-gray-900">{price}</span>
-            <span className=" text-gray-700 text-lg">/ {date}</span>
+
+          <div className="mb-10 ml-5">
+            <h3 className="text-gray-800 font-medium mb-1 text-lg">ແພັກແກັດ {title}</h3>
+
+            {originalPrice && (
+              <div className="text-sm text-red-400 line-through mb-1">{originalPrice}</div>
+            )}
+
+            <div className="flex items-baseline gap-1">
+              <span className="text-2xl font-bold text-gray-900">{price}</span>
+              <span className=" text-gray-700 text-lg">/ {date}</span>
+            </div>
           </div>
-        </div>
 
 
-        <div className={`bg-gradient-to-b ${buttonClass} ${status === "Gold" ? 'text-black' : 'text-white'} py-3 absolute bottom-0 left-0 right-0`}>
-          <div className="flex justify-center items-center gap-2">
-            <FaStar />
-            <span className="text-lg font-medium ">{badge}</span>
+          <div className={`bg-gradient-to-b ${buttonClass} ${status === "Gold" ? 'text-black' : 'text-white'} py-3 absolute bottom-0 left-0 right-0`}>
+            <div className="flex justify-center items-center gap-2">
+              <FaStar />
+              <span className="text-lg font-medium ">{badge}</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+  )
 };
 
 export default PackagesCard;

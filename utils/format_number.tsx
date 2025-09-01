@@ -4,3 +4,4 @@ export const formatLaoKip = (price: number) => {
     maximumFractionDigits: 0,
   }).format(price);
 };
+

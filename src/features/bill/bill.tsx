@@ -3,7 +3,7 @@ import { Check } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../../assets/naga_logo.png';
 import { Watermark } from 'antd';
-import '../../components/css/buill.css'
+import '../../features/bill/bill.css'
 
 const mockData = {
     fields: [

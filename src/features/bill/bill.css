@@ -1,0 +1,18 @@
+
+.paper {
+  border-radius: 15px;
+  position: relative;
+  padding: 20px 20px 40px 20px;
+  background: white;
+}
+.paper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 24px;
+  background: linear-gradient(-45deg, #E7E7E9 12px, transparent 0%),
+    linear-gradient(45deg, #E7E7E9 12px, transparent 0%);
+  background-size: 24px;
+}
